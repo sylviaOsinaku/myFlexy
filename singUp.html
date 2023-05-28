@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexy | signUp</title>
+    <style>
+      body {
+        background-image: url(signUp-background.jpg);
+        background-size: cover;
+        background-color: hsl(216, 53%, 9%);
+        background-blend-mode: screen;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      form {
+        display: inline-flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        color: #121212;
+        padding: 1.2em;
+      }
+      .img {
+        object-fit: contain;
+        text-align: center;
+        padding: 0.8em;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+        background-color: #fff;
+        padding: 0.8em 1.2em;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      label {
+        font-weight: bold;
+        font-size: 0.85rem;
+      }
+      input {
+        margin: 1em 0em;
+        padding: 1.2em;
+      }
+      .submit {
+        padding: 1.2em 3em;
+        background-color: rgb(130, 0, 87);
+        color: #fff;
+        border-radius: 20px;
+        border: none;
+        margin: 0;
+      }
+      p {
+        font-size: 0.75rem;
+        margin-bottom: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img"><img src="logo-1-flexy.png" alt="" /></div>
+
+    <form action="index.html">
+      <div class="head">
+        <p>Create account</p>
+        <p>Sign up</p>
+      </div>
+      <div>
+        <label for="email"> Email</label> <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          title="example@gmail.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
+      </div>
+      <div>
+        <label for="password"> Password (enter at least six characters)</label>
+        <br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          pattern=".{6,}"
+        />
+      </div>
+
+      <div>
+        <label for="phone">Phone(optional)</label> <br />
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          autocomplete="off"
+        />
+      </div>
+      <p>
+        <i>By clicking create new account</i>
+
+        you have read,<br />understood and agreed to be bound by <br />the
+        Service Terms and Condition, <br />Privacy policy and licence agreement.
+      </p>
+
+      <div>
+        <button type="submit" class="submit">Create new account</button>
+      </div>
+    </form>
+  </body>
+</html>
